@@ -1,5 +1,5 @@
 let url = "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/global-temperature.json";
-let req = new XMLHttpRequest(); //import data into js object
+let req = new XMLHttpRequest();
 
 let baseTemp
 let values = [];
@@ -48,7 +48,7 @@ let createScales = () => {
     })
 
     xScale = d3.scaleLinear()
-            .domain([minYear, maxYear + 1]) //to show the data for the last year in domain properly
+            .domain([minYear, maxYear + 1]) 
             .range([padding, width - padding])
             
 
@@ -136,10 +136,10 @@ let createCells = () => {
 
 let createAxes = () => {
     let xAxis = d3.axisBottom(xScale)
-                .tickFormat(d3.format("d")) // d - https://observablehq.com/@d3/d3-format
+                .tickFormat(d3.format("d")) 
 
     let yAxis = d3.axisLeft(yScale)
-                .tickFormat(d3.timeFormat("%B")) //%B - show months as a string
+                .tickFormat(d3.timeFormat("%B")) 
 
     canvas.append("g")
             .call(xAxis)
@@ -155,10 +155,9 @@ let createAxes = () => {
 };
 
 req.open("GET", url, true);
-req.onload = () => { //response to the request
-    //console.log(req.responseText) ---- check the data is showing in the console
-    let object = JSON.parse(req.responseText) //convert json data into js object
-    baseTemp = object["baseTemperature"] // select a particular data from object
+req.onload = () => { 
+    let object = JSON.parse(req.responseText) 
+    baseTemp = object["baseTemperature"] 
     values = object["monthlyVariance"]
     console.log(baseTemp)
     console.log(values)
@@ -167,4 +166,4 @@ req.onload = () => { //response to the request
     createAxes()
 
 };
-req.send(); //sending off the request
+req.send(); 
