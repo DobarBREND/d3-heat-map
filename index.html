@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heat Map</title>
+    <link rel="icon" type="text/x-icon" href="./images/icon1.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+</head>
+<body>
+    <h1 id="title">Monthly Global Land-Surface Temperature</h1>
+    <h3 id="description">1753 - 2015: base temperature 8.66℃</h3>
+    
+    <svg id="canvas">
+            <text id="tooltip" x="400" y="48"></text>
+            
+            <g id="legend">
+                <text x="260" y="576" fill="gray" style="font-size: 16px; font-family: Arial, sans-serif;">Legend</text>
+                
+                <rect x="350" y="562" width="20" height="20" fill="Blue"></rect>
+                <text x="345" y="592" fill="gray" style="font-size: 9px; font-family: Arial, sans-serif;">2.8 - 3.9</text>
+
+                <rect x="410" y="562" width="20" height="20" fill="SteelBlue"></rect>
+                <text x="405" y="592" fill="gray" style="font-size: 9px; font-family: Arial, sans-serif;">3.9 - 5.0</text>
+
+                <rect x="470" y="562" width="20" height="20" fill="DeepSkyBlue"></rect>
+                <text x="465" y="592" fill="gray" style="font-size: 9px; font-family: Arial, sans-serif;">5.0 - 6.1</text>
+
+                <rect x="530" y="562" width="20" height="20" fill="SkyBlue"></rect>
+                <text x="525" y="592" fill="gray" style="font-size: 9px; font-family: Arial, sans-serif;">6.1 - 7.2</text>
+
+                <rect x="590" y="562" width="20" height="20" fill="Orange"></rect>
+                <text x="585" y="592" fill="gray" style="font-size: 9px; font-family: Arial, sans-serif;">7.2 - 8.3</text>
+
+                <rect x="650" y="562" width="20" height="20" fill="DarkOrange"></rect>
+                <text x="645" y="592" fill="gray" style="font-size: 9px; font-family: Arial, sans-serif;">8.3 - 9.5</text>
+
+                <rect x="710" y="562" width="20" height="20" fill="OrangeRed"></rect>
+                <text x="702" y="592" fill="gray" style="font-size: 9px; font-family: Arial, sans-serif;">9.5 - 10.6</text>
+
+                <rect x="770" y="562" width="20" height="20" fill="Red"></rect>
+                <text x="760" y="592" fill="gray" style="font-size: 9px; font-family: Arial, sans-serif;">10.6 - 11.7</text>
+
+                <rect x="830" y="562" width="20" height="20" fill="FireBrick"></rect>
+                <text x="820" y="592" fill="gray" style="font-size: 9px; font-family: Arial, sans-serif;">11.7 - 12.8</text>
+            </g>
+            <text x="1180" y="300" fill="gray" style="font-size: 12px; font-weight: 400; writing-mode: tb; font-family: Arial, Helvetica, sans-serif;">&copy; Vladimir Jovanović :: DobarBREND 2023</text>
+            
+    </svg>
+    
+    <script src="./js/scripts.js" defer></script>
+   
+</body>
+</html>
